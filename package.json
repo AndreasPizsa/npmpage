@@ -1,0 +1,46 @@
+{
+  "name": "npmpage",
+  "version": "0.0.0-development",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc ava",
+    "pretest": "xo",
+    "semantic-release": "semantic-release"
+  },
+  "keywords": [],
+  "author": "Andreas Pizsa <hopster@gmail.com> (https://github.com/AndreasPizsa)",
+  "license": "MIT",
+  "devDependencies": {
+    "@andreaspizsa/eslint-config-xo": "^0.1.2",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "ava": "^3.3.0",
+    "finepack": "^2.10.1",
+    "husky": "^4.2.3",
+    "nyc": "^15.0.0",
+    "semantic-release": "^17.0.3",
+    "xo": "^0.26.1"
+  },
+  "xo": {
+    "semicolon": false,
+    "space": true,
+    "extends": [
+      "@andreaspizsa/eslint-config-xo"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AndreasPizsa/npmpage.git"
+  }
+}
